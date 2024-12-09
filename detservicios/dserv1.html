@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dserv.css">
+    <title>Servicio1</title>
+
+    <script>
+        // Función para mostrar el modal al cargar la página
+        window.onload = function() {
+            document.getElementById('miAviso').style.display = 'block';
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            document.getElementById('miAviso').style.display = 'none';
+        }
+        function finalizarCom() {
+            window.open("../servicios/servicio1.html", "_blank");
+        }
+    </script>
+
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <!--AVISO (ALERTA o MODAL) -->
+    <div id="miAviso" class="aviso">
+        <div class="aviso-contenido">
+            <span class="cerrar" onclick="closeModal()">&times;</span>
+            <p>¡ATENCIÓN! Por favor, lea detenidamente los detalles del servicio antes de realizar tu compra. ¡Muchas gracias!</p>
+        </div>
+    </div>
+    
+    <main>
+        <h1>Desarrollo de Software Personalizado: Sistema de Gestión de Inventario</h1>
+
+            <P>Descripción General: <br><br>
+                El desarrollo de un sistema de gestión de inventario personalizado es una solución integral diseñada para 
+                ayudar a las empresas a optimizar el control de sus productos y ventas. 
+                Este sistema no solo se adapta a las necesidades específicas de cada organización, sino que también mejora la eficiencia operativa, 
+                reduce costos y proporciona información valiosa para la toma de decisiones estratégicas.
+            </P><br><br>
+
+            <p>Objetivos del Sistema: <br><br>
+                1.Control de Inventario: Permitir a las empresas llevar un registro preciso y en tiempo real de sus existencias, 
+                facilitando la identificación de productos disponibles, en stock bajo o agotados. <br><br>
+
+                2.Gestión de Ventas: Integrar un módulo de ventas que permita registrar transacciones, 
+                generar facturas y llevar un seguimiento de las ventas realizadas, 
+                lo que ayuda a entender mejor el comportamiento del mercado y las preferencias de los clientes. <br><br>
+
+                3.Reportes y Análisis: Proporcionar herramientas de análisis y generación de reportes que 
+                permitan a los gerentes y propietarios de negocios evaluar el rendimiento de sus productos, 
+                identificar tendencias de ventas y tomar decisiones informadas sobre compras y promociones. <br><br>
+
+                4.Integración con Otros Sistemas: Facilitar la integración con otros sistemas empresariales, 
+                como contabilidad, CRM (Customer Relationship Management) y plataformas de comercio electrónico, 
+                para asegurar un flujo de información coherente y eficiente. <br><br>
+
+                5.Accesibilidad y Usabilidad: Desarrollar una interfaz intuitiva y fácil de usar que permita a los empleados 
+                de diferentes niveles de habilidad tecnológica interactuar con el sistema sin complicaciones. 
+                Además, considerar la posibilidad de acceso remoto para que los usuarios puedan gestionar el inventario desde cualquier lugar.
+            </p><br><br>
+
+            <p>Características Principales: <br><br>
+                Registro de Productos: Permitir la entrada de nuevos productos con detalles como nombre, 
+                descripción, precio, cantidad, proveedor y categoría. <br> <br>
+
+                Control de Stock: Implementar alertas automáticas para notificar a los usuarios cuando los niveles de inventario 
+                caen por debajo de un umbral predefinido. <br><br>
+
+                Historial de Transacciones: Mantener un registro completo de todas las transacciones de entrada y salida de productos, 
+                lo que facilita la auditoría y el seguimiento. <br><br>
+
+                Gestión de Proveedores: Incluir un módulo para gestionar la información de los proveedores, 
+                facilitando la comunicación y el seguimiento de pedidos. <br><br>
+
+                Interfaz de Usuario Personalizable: Permitir a los usuarios personalizar su experiencia, 
+                eligiendo qué información desean ver y cómo desean que se presente. <br><br>
+
+                Seguridad de Datos: Implementar medidas de seguridad robustas para proteger la información sensible
+                 de la empresa y garantizar que solo los usuarios autorizados tengan acceso a ciertas funciones.
+            </p><br><br>
+
+            <p>Beneficios del Sistema: <br><br>
+                Eficiencia Operativa: Al automatizar procesos manuales, las empresas pueden reducir el tiempo y los recursos 
+                dedicados a la gestión de inventario, permitiendo que el personal se enfoque en tareas más estratégicas. <br><br>
+
+                Reducción de Errores: La digitalización de los registros minimiza los errores humanos asociados con la gestión 
+                manual de inventarios, lo que se traduce en una mayor precisión en los datos. <br><br>
+
+                Mejora en la Toma de Decisiones: Con acceso a datos analíticos y reportes detallados, los gerentes pueden tomar 
+                decisiones más informadas sobre compras, promociones y estrategias de ventas. <br><br>
+
+                Aumento de la Satisfacción del Cliente: Un control de inventario más eficiente permite a las empresas cumplir con los 
+                pedidos de manera más rápida y precisa, mejorando la experiencia del cliente.
+            </p>
+
+            <p class="alerta-mensaje">¡ATENCIÓN! Por favor, lea detenidamente los detalles del servicio antes de realizar tu compra. ¡Muchas gracias!</p>
+
+                <button type="button" onclick="finalizarCom()">Comprar servicio</button>
+    </main>
+</body>
+</html>

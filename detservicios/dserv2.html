@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dserv.css">
+    <title>Document</title>
+
+    <script>
+        // Función para mostrar el modal al cargar la página
+        window.onload = function() {
+            document.getElementById('miAviso').style.display = 'block';
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            document.getElementById('miAviso').style.display = 'none';
+        }
+        function finalizarCom() {
+            window.open("../servicios/servicio1.html", "_blank");
+        }
+    </script>
+
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <!--AVISO (ALERTA o MODAL) -->
+    <div id="miAviso" class="aviso">
+        <div class="aviso-contenido">
+            <span class="cerrar" onclick="closeModal()">&times;</span>
+            <p>¡ATENCIÓN! Por favor, lea detenidamente los detalles del servicio antes de realizar tu compra. ¡Muchas gracias!</p>
+        </div>
+    </div>
+
+    <main>
+        <h1>Consultoría en Transformación Digital: Implementación de Herramientas de Colaboración en Línea</h1>
+
+            <P>Descripción General: <br><br>
+                La consultoría en transformación digital se ha convertido en un componente esencial para las organizaciones que
+                 buscan adaptarse a un entorno empresarial en constante evolución. En este contexto, 
+                 el asesoramiento sobre la implementación de herramientas de colaboración en línea se presenta como una estrategia
+                  clave para mejorar la comunicación y el trabajo en equipo. Este enfoque no solo facilita la interacción entre los miembros del equipo, 
+                  sino que también optimiza los procesos de trabajo, fomenta la innovación y mejora la productividad general de la organización.
+            </P> <br><br>
+
+            <p>Objetivos de la Consultoría: <br><br>
+                1.Evaluación de Necesidades: Realizar un diagnóstico exhaustivo de la situación actual de la 
+                empresa en términos de comunicación y colaboración, identificando áreas de mejora y oportunidades 
+                para la implementación de herramientas digitales. <br><br>
+
+                2.Selección de Herramientas Adecuadas: Asesorar sobre las mejores herramientas de colaboración 
+                en línea que se alineen con los objetivos estratégicos de la organización, considerando factores 
+                como el tamaño del equipo, la naturaleza del trabajo y el presupuesto disponible. <br><br>
+
+                3.Planificación de la Implementación: Desarrollar un plan de implementación detallado que contemple 
+                las fases del proceso, los recursos necesarios, los plazos y las métricas de éxito para evaluar el 
+                impacto de las herramientas adoptadas. <br><br>
+
+                4.Capacitación y Soporte: Proporcionar formación a los empleados sobre el uso efectivo de las herramientas 
+                seleccionadas, así como soporte continuo para resolver dudas y problemas que puedan surgir durante 
+                la transición. <br><br>
+
+                5.Evaluación y Mejora Continua: Establecer un sistema de seguimiento y evaluación que permita 
+                medir el impacto de las herramientas de colaboración en línea en la comunicación y el trabajo 
+                en equipo, así como realizar ajustes según sea necesario.</p> <br><br>
+
+            <p>Características de la Consultoría: <br><br>
+                Análisis de Cultura Organizacional: Evaluar la cultura de la empresa para entender cómo se 
+                comunican y colaboran los equipos, lo que permitirá seleccionar herramientas que se integren 
+                de manera efectiva en el entorno laboral existente. <br> <br>
+
+                Identificación de Flujos de Trabajo: Mapear los flujos de trabajo actuales para identificar 
+                cuellos de botella y áreas donde la colaboración puede ser mejorada mediante la digitalización. <br><br>
+
+                Integración de Herramientas: Asesorar sobre la integración de herramientas de colaboración con 
+                otros sistemas existentes en la empresa, como CRM, ERP y plataformas de gestión de proyectos, 
+                para asegurar un flujo de información coherente. <br><br>
+
+                Fomento de la Colaboración Remota: Proporcionar estrategias para facilitar la colaboración 
+                entre equipos distribuidos geográficamente, asegurando que todos los miembros del equipo 
+                tengan acceso a la información y recursos necesarios. <br><br>
+
+                Promoción de la Innovación: Fomentar un entorno de trabajo que valore la innovación y 
+                la creatividad, utilizando herramientas que permitan la co-creación y el intercambio de 
+                ideas entre los miembros del equipo. 
+            </p><br><br>
+
+            <p>Beneficios de la Implementación de Herramientas de Colaboración en Línea: <br><br>
+                Mejora de la Comunicación: Las herramientas de colaboración en línea permiten una comunicación 
+                más fluida y efectiva, eliminando barreras geográficas y temporales. Esto se traduce en una mayor 
+                agilidad en la toma de decisiones y en la resolución de problemas. <br><br>
+
+                Aumento de la Productividad: Al facilitar el acceso a la información y la colaboración en tiempo 
+                real, los equipos pueden trabajar de manera más eficiente, reduciendo el tiempo dedicado a tareas 
+                administrativas y mejorando la gestión del tiempo. <br><br>
+
+                Flexibilidad y Adaptabilidad: Las herramientas digitales permiten a las organizaciones adaptarse 
+                rápidamente a cambios en el entorno laboral, como el trabajo remoto o la necesidad de colaboración 
+                en proyectos transversales <br><br>
+
+                Fortalecimiento del Trabajo en Equipo: La implementación de plataformas de colaboración fomenta 
+                un sentido de comunidad y pertenencia entre los miembros del equipo, lo que puede mejorar la moral 
+                y el compromiso de los empleados. <br><br>
+                
+                Acceso a Información Centralizada: Las herramientas de colaboración en línea permiten almacenar 
+                y compartir información de manera centralizada, lo que facilita el acceso a documentos y recursos 
+                importantes para todos los miembros del equipo.
+            </p>
+
+            <p class="alerta-mensaje">¡ATENCIÓN! Por favor, lea detenidamente los detalles del servicio antes de realizar tu compra. ¡Muchas gracias!</p>
+
+                <button type="button" onclick="finalizarCom()">Comprar servicio</button>
+    </main>
+</body>
+</html>

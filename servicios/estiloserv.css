@@ -1,0 +1,111 @@
+body {
+    font-family: georgia;
+    background-color: #72899c;
+    margin: 0;
+    padding: 20px;
+    
+    scroll-behavior: smooth;
+    background-image: url(../logo/logo1.png);
+    background-size: 90% 65%;
+    background-position: center 80%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100hv;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 13, 13, 0.836);
+    z-index: -1;
+    position: fixed;
+}
+
+h1 {
+    color: #fafafa; /*titulo del formulario*/
+    text-align: center;
+}
+
+form {
+    background: #14719cb7;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 2px 10px rgba(101, 11, 11, 0.1), 0 0 15px rgba(73, 0, 245, 0.95);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="radio"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #00e7f7;
+    box-shadow: 0 2px 10px rgba(101, 11, 11, 0.1), 0 0 15px rgba(2, 2, 2, 0.95);
+
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="radio"] {
+    /*width: auto;
+    display: inline-block;*/
+    margin-right: 300px;
+}
+
+button {
+    background-color: #a76528;
+    color: rgb(255, 249, 249);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(101, 11, 11, 0.1), 0 0 15px rgba(187, 238, 3, 0.95);
+}
+
+button:hover {
+    background-color: #1a632a;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #6b1919;
+}
+
+h2 {
+    text-align: center;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+@media (max-width: 600px) {
+    .column {
+        width: 100%; /* Apilar columnas en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 601px) {
+    .column {
+        width: 50%; /* Dos columnas en pantallas más grandes */
+    }
+}

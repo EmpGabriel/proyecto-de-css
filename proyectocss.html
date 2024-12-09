@@ -1,0 +1,209 @@
+<!--
+
+Proyecto
+
+Darle estilos a este documento HTML, con todo lo que hemos visto hasta ahora
+La base de este documento debe permacer lo mas parecida posible 
+(en el sentido de que se vea igual en todos los navegadores y que mantenga la estructura basica)
+
+fecha de entrega: 02/12/2024
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./estilos.css">
+  <title>Proyecto</title>
+</head>
+<body>
+  <header>
+    <!-- para que se vea semitransparente -->
+    <div class="overlay"></div> 
+    <nav>
+      <ul class="menu">
+        <li>
+          <img src="./logo/logo1.png" alt="logo.png">
+        </li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#noticias">Noticias</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a href="#footer-contenido">Contacto</a></li>
+      </ul>
+    </nav>
+
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  </header>
+
+  <main>
+    <h1 id="inicio">¿QUIENES SOMOS?</h1>
+    <p>TechSolutions es una empresa innovadora dedicada a proporcionar soluciones tecnológicas integrales para pequeñas y medianas empresas.</p>
+    <p>Nuestro objetivo es ayudar a nuestros clientes a optimizar sus procesos, aumentar su productividad y mejorar su presencia en el mercado a través de la tecnología.</p>
+    
+
+    <section>
+      <h2 id="servicios">NUESTROS SERVICIOS</h2>
+      <p>En TechSolutions, ofrecemos soluciones innovadoras que impulsan el crecimiento y la eficiencia de tu negocio. Conoce nuestros servicios.</p>
+      <ul>
+        <li><a href="./detservicios/dserv1.html" target="_blank">Desarrollo de Software Personalizado</a></li>
+        <p>Descripción:</p>
+        <p>Desarrollo de un sistema de gestión de inventario que permite a las empresas llevar un control detallado de sus productos y ventas.</p>
+        
+        <li><a href="./detservicios/dserv2.html" target="_blank">Consultoría en Transformación Digital</a></li>
+        <p>Descripción:</p>
+        <p>Asesoramiento sobre la implementación de herramientas de colaboración en línea para mejorar la comunicación y el trabajo en equipo.</p>
+
+        <li><a href="./detservicios/dserv3.html" target="_blank">Diseño y Desarrollo de Sitios Web</a></li>
+        <p>Descripción:</p>
+        <p>Creación de un sitio web para una tienda en línea que incluye un sistema de pago seguro y una interfaz amigable para el usuario.</p>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="productos">Productos</h2>
+      <p>Además de nuestros servicios, ofrecemos una alta gama de productos.</p>
+      <ul>
+        <li><a href="gabriel.com">ProjectAI Manager</a></li>
+        <li><a href="gabriel.com">SmartCollab Suite</a></li>
+        <li><a href="gabriel.com">DataInsight Analytics</a></li>
+        <li><a href="gabriel.com">TaskAutomator Pro</a></li>
+        <li><a href="gabriel.com">Insightful CRM</a></li>
+      </ul>
+    </section>
+
+    <article>
+      <h2 id="noticias">Noticias</h2>
+      <p>Noticias más recientes dentro del mundo de TechSolutions</p>
+      <ul>
+        <li><a href="./noticias/noticia1.html">TechSolutions Lanza Nueva Plataforma de Gestión de Proyectos</a></li>
+        <p>Fecha: 3 de diciembre de 2024</p>
+
+        <li><a href="./noticias/noticia2.html">TechSolutions Expande Sus Servicios a América Latina</a></li>
+        <p>Fecha: 3 de diciembre de 2024</p>
+
+        <li><a href="./noticias/noticia3.html">TechSolutions Recibe Reconocimiento por Innovación en Tecnología</a></li>
+        <p>Fecha: 3 de diciembre de 2024</p>
+      </ul>
+    </article>
+
+
+    <div id="fondo-oscuro"></div>
+      <div id="aviso">
+          <span class="closebtn" onclick="cerrarAviso()">&times;</span>
+          <p id="aviso-texto"></p>
+      </div>
+
+    <section class="preguntas">
+      <h2 id="preguntas">Preguntas Frecuentes</h2>
+      <h4>Estamos aquí para resolver tus dudas y brindarte la mejor experiencia.</h4><br><br><br>
+  
+      <p id="pregunta0" onclick="mostrarAviso('Nuestros productos están diseñados para empresas de todos los tamaños y sectores. Desde startups hasta grandes corporaciones, cualquier organización que busque mejorar su eficiencia, colaboración y toma de decisiones puede beneficiarse de nuestras soluciones.')">
+        1. ¿Qué tipo de empresas pueden beneficiarse de los productos de TechSolutions?</p>
+
+      <p id="pregunta1" onclick="mostrarAviso('ProjectAI Manager ofrece integraciones con una variedad de herramientas populares de gestión de proyectos, comunicación y análisis de datos. Nuestro equipo de soporte puede ayudarte a configurar estas integraciones para que puedas aprovechar al máximo nuestras soluciones.')">
+        2. ¿Cómo se integra ProjectAI Manager con otras herramientas que ya utilizo?</p>
+
+      <p id="pregunta2" onclick="mostrarAviso('No, SmartCollab Suite está diseñada con una interfaz intuitiva que facilita su uso, incluso para aquellos sin experiencia técnica. Ofrecemos tutoriales y recursos de capacitación para ayudar a los usuarios a familiarizarse con la plataforma.')">
+        3. ¿Es necesario tener experiencia técnica para usar SmartCollab Suite?</p>
+
+      <p id="pregunta3" onclick="mostrarAviso('Ofrecemos soporte técnico 24/7 a través de chat en vivo, correo electrónico y teléfono. Además, contamos con una base de conocimientos en línea que incluye guías, tutoriales y preguntas frecuentes para ayudar a los usuarios a resolver problemas comunes.')">
+        4. ¿Qué tipo de soporte ofrece TechSolutions?</p>
+
+      <p id="pregunta4" onclick="mostrarAviso('TaskAutomator Pro es compatible con una amplia gama de aplicaciones y plataformas. Sin embargo, si tienes alguna aplicación específica en mente, te recomendamos consultar con nuestro equipo de soporte para confirmar la compatibilidad.')">
+        5. ¿TaskAutomator Pro es compatible con todas las aplicaciones?</p>
+
+      <p id="pregunta5" onclick="mostrarAviso('Sí, ofrecemos una prueba gratuita de 14 días para la mayoría de nuestros productos y servicios. Esto te permite explorar las funcionalidades y beneficios de nuestras soluciones antes de tomar una decisión de compra.')">
+        6. ¿Hay una prueba gratuita disponible para los productos y servicios de TechSolutions?</p>
+  
+      <div id="aviso">
+          <span class="closebtn" onclick="cerrarAviso()">&times;</span>
+          <p id="aviso-texto"></p>
+      </div>
+  
+      <script>
+          function mostrarAviso(mensaje) {
+              const aviso = document.getElementById('aviso');
+              const fondoOscuro = document.getElementById('fondo-oscuro');
+              const avisoTexto = document.getElementById('aviso-texto');
+
+              avisoTexto.textContent = mensaje; // Establece el texto del aviso
+              fondoOscuro.classList.add('visible'); // Muestra el fondo oscuro
+              aviso.classList.add('visible'); // Muestra el aviso con transición
+
+              // Asegúrate de que el fondo oscuro esté visible
+              fondoOscuro.style.display = 'block'; // Muestra el fondo oscuro
+          }
+  
+          function cerrarAviso() {
+              const aviso = document.getElementById('aviso');
+              const fondoOscuro = document.getElementById('fondo-oscuro');
+  
+              aviso.classList.remove('visible'); // Oculta el aviso con transición
+              fondoOscuro.classList.remove('visible'); // Oculta el fondo oscuro
+
+              // Espera un momento antes de ocultar el fondo oscuro completamente
+              setTimeout(() => {
+                  fondoOscuro.style.display = 'none'; // Oculta el fondo oscuro
+              }, 300); // Debe coincidir con la duración de la transición
+                    }
+      </script>
+  </section>
+
+  </main>
+  <footer>
+    <div id="footer-contenido">
+      <div class="izquierda">
+        
+        <ul>
+          <h3>Contacto de redes sociales</h3>
+          <li>Facebook: <a href="https://www.facebook.com" target="_blank">facebook.com/TechSolution</a></li>
+          <li>Twitter: <a href="https://www.Twitter.com" target="_blank">twitter.com/TechSolution</a></li>
+          <li>Instagram: <a href="https://www.Instagram.com" target="_blank">instagram.com/TechSolution</a></li>
+          <li>Linkedin: <a href="https://www.Instagram.com" target="_blank">linkedin.com/TechSolution</a></li>
+        </ul>
+      </div>
+
+      <div class="derecha">
+        <h3>Soporte</h3>
+          <p>Correo Electrónico de Soporte:<a>soporte@techsolutions.com</a></p>
+          <p>Teléfono de Soporte:<a>+1 (800) 123-4567</a></p>
+          <p>Chat en Vivo: Disponible en nuestro sitio web <a href="http://www.techsolutions.com" target="_blank">www.techsolutions.com</a></p>
+      </div>
+    </div>
+      <h4 class="copy">&copy; Techsolutions C.A. Todos los derechos reservados.</h4>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    // Muestra el menú al pasar el cursor sobre el botón
+    menuToggle.addEventListener('mouseenter', () => {
+        menu.classList.add('active');
+    });
+
+    // Oculta el menú al salir el cursor del botón
+    menuToggle.addEventListener('mouseleave', () => {
+        menu.classList.remove('active');
+    });
+
+    // Oculta el menú al salir el cursor del menú
+    menu.addEventListener('mouseleave', () => {
+        menu.classList.remove('active');
+    });
+
+    // Asegúrate de que el menú no se oculte al hacer clic en los elementos del menú
+    menu.addEventListener('click', (event) => {
+        event.stopPropagation(); // Evita que el evento se propague
+    });
+</script>
+
+</body>
+</html>

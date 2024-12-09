@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../servicios/estiloserv.css">
+    <title>Formulario de Contratación de Servicio</title>
+    <script>
+        function actualizarMonto() {
+            var tiempo = document.getElementById("tiempo_licencia").value;
+            var monto;
+            switch(tiempo) {
+                case "mes":
+                    monto = "50$";
+                    break;
+                case "trimestral":
+                    monto = "120$";
+                    break;
+                case "semestral":
+                    monto = "270$";
+                    break;
+                case "anual":
+                    monto = "550$";
+                    break;
+                default:
+                    monto = "";
+            }
+            document.getElementById("monto").innerText = "Monto: " + monto;
+            actualizarFechaVencimiento();
+        }
+
+        function actualizarFechaVencimiento() {
+            var fechaAdquisicion = document.getElementById("fecha_adquisicion").value;
+            var tiempo = document.getElementById("tiempo_licencia").value;
+            if (fechaAdquisicion) {
+                var fecha = new Date(fechaAdquisicion);
+                switch(tiempo) {
+                    case "mes":
+                        fecha.setMonth(fecha.getMonth() + 1);
+                        break;
+                    case "trimestral":
+                        fecha.setMonth(fecha.getMonth() + 3);
+                        break;
+                    case "semestral":
+                        fecha.setMonth(fecha.getMonth() + 6);
+                        break;
+                    case "anual":
+                        fecha.setFullYear(fecha.getFullYear() + 1);
+                        break;
+                }
+                var dd = String(fecha.getDate()).padStart(2, '0');
+                var mm = String(fecha.getMonth() + 1).padStart(2, '0'); // Enero es 0
+                var yyyy = fecha.getFullYear();
+                document.getElementById("fecha_vencimiento").innerText = "Fecha de Vencimiento: " + dd + '/' + mm + '/' + yyyy;
+            }
+        }
+
+        function validarFormulario() {
+            var campos = document.querySelectorAll('input[type="text"], input[type="tel"], input[type="email"], input[type="date"], select');
+            for (var campo of campos) {
+                if (!campo.value) {
+                    alert("Por favor, complete todos los campos.");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function finalizarCompra() {
+            if (validarFormulario()) {
+                alert("¡Gracias por preferirnos! ESTAMOS VERIFICANDO SU COMPRA. En un Lapso de 24 horas, el equipo de soporte se pondrá en contacto con usted!");
+                limpiarFormulario();
+            }
+        }
+
+        function limpiarFormulario() {
+            document.getElementById("nombre").value = "";
+            document.getElementById("cedula_rif").value = "";
+            document.getElementById("telefono").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("direccion").value = "";
+            document.getElementById("tiempo_licencia").value = "";
+            document.getElementById("fecha_adquisicion").value = "";
+            document.getElementById("codigo_transferencia").value = "";
+            document.getElementById("monto").innerText = "Monto: ";
+            document.getElementById("fecha_vencimiento").innerText = "Fecha de Vencimiento: ";
+        }
+    </script>
+</head>
+<body class="overlay">
+    <h1>Contratación de Servicio: Diseño y Desarrollo de Sitios Web</h1>
+    <form>
+        <label for="nombre">Nombre del Cliente o Empresa:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="cedula_rif">Cédula o RIF:</label><br>
+        <input type="text" id="cedula_rif" name="cedula_rif" required><br><br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono" required><br><br>
+
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="direccion">Ciudad y Dirección del Cliente o Empresa:</label><br>
+        <input type="text" id="direccion" name="direccion" required><br><br>
+
+        <label for="tiempo_licencia">Tiempo de Licencia:</label><br>
+        <select id="tiempo_licencia" name="tiempo_licencia" onchange="actualizarMonto()" required>
+            <option value="">Seleccione...</option>
+            <option value="mes">Mes</option>
+            <option value="trimestral">Trimestral</option>
+            <option value="semestral">Semestral</option>
+            <option value="anual">Anual</option>
+        </select><br><br>
+
+        <p id="monto">Monto: </p><br>
+
+        <label for="fecha_adquisicion">Fecha de Adquisición:</label><br>
+        <input type="date" id="fecha_adquisicion" name="fecha_adquisicion" onchange="actualizarFechaVencimiento()" required><br><br>
+
+        <p id="fecha_vencimiento">Fecha de Vencimiento: </p><br>
+
+        <h2>Cuentas bancarias para trasnferir el monto de su respectivo tiempo de servicio.</h2>
+        <h2>Banco HTML: <br> Número de cuenta 0123-4567-8901-2345 </h2>
+        <h2>Banco CSS: <br> Número de cuenta 9876-5432-1098-7654 </h2>
+
+        <label for="codigo_transferencia">Código de Transferencia de Pago:</label><br>
+        <input type="text" id="codigo_transferencia" name="codigo_transferencia" required><br><br>
+
+        <button type="button" onclick="finalizarCompra()">Finalizar la Compra</button>
+    </form>
+</body>
+</html>
